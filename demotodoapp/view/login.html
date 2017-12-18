@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>Welcome back.</h4>
+
+  <input type="text" id="userName" placeholder="name" name="name" class="form-control input-sm chat-input"  ng-model='user.username'><br/>
+                <br/>
+  <input type="password" id="userPassword" placeholder="password" name="password" class="form-control input-sm chat-input" ng-model='user.userpass'><br/><br/>
+  <div class="wrapper">
+         <span class="group-btn">
+            <button type="submit" class="btn btn-primary btn-md" ng-click=checkUser()>Submit<i class="fa fa-sign-in"></i></button>
+         </span>
+  </div>
+                <br/><br/>
+  <a id="registerLink" href="#register">Sign Up</a>
+  <span id="error_msg" ng-model="msg" ></span>
+    <h4>{{msg}}</h4>
+
+            </div></div></div></div>

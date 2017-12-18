@@ -1,0 +1,25 @@
+<div ng-include="'header.html'"></div>
+<div>
+<h2>You've got <span class="emphasis">{{getTotalNotes()}}</span> things to do</h2>
+  <br/><br/>
+  <input type="text" ng-model="filteredNotes" /><br/>
+      <ul>
+        <li ng-repeat="notes in notes_list | filter : filteredNotes" >
+<!--          <input type="checkbox" ng-model="todo.completed" ng-change="updateLink()" />-->
+            
+          <!--<span class="done-{{todo.completed}}">{{todo.todos}}</span>-->
+            <span class="done-{{todo.completed}}">{{notes.note}}</span>
+            
+        </li>
+      </ul>
+      <form>
+        <br/><br/>
+        <a href="#saveNotesList" ng-show="showNotesLink" ng-click="saveNotesList()">Save List</a>
+        <br/><br/>
+        <input class="add-input" placeholder="I need to..." type="text" id="notename" ng-model="notename" ng-model-instant />
+        <button class="add-btn" ng-click="addNote()"><h2>Add</h2></button>
+<!--          <button class="add-btn" ng-click="alert('add called')">Add Note</button>-->
+      </form>
+
+      <!--<button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>-->
+</div>

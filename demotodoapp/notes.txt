@@ -1,0 +1,26 @@
+With GET you can make use of params and at server you can get that value in req.query see following sample:
+
+ $http({
+            url: 'http://localhost:7200/api/manage-product',
+            method: 'GET',
+            params: {email:vm.email} //at server it will be req.query.email
+        }).success(function(res) {
+
+             //access returned res here
+
+        }, function(error) {
+            //handle error here
+        });
+With POST you can make use of data and at server you can get that value in req.body see following sample:
+
+ $http({
+            url: 'http://localhost:7200/api/manage-product',
+            method: 'GET',
+            data: {email:vm.email} //at server it will be req.body.email
+        }).success(function(res) {
+
+             //access returned res here
+
+        }, function(error) {
+            //handle error here
+        });

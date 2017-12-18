@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.min.js"></script>
+	<script src="angular-route.js" ></script>
+    <script src="angular-cookies.js"></script>
+  <script src="app.js"></script>
+    <!--Pulling Awesome Font -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body ng-app="loginApp">
+    
+  <div> <!--ng-controller="loginController">-->
+    <ng-view></ng-view>
+
+
+    <h4>{{msg}}</h4>
+
+  </div>
+
+</body>
+
+
+</html>
